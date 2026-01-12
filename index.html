@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Umar Butt | Operations & Web Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Crystal Cursor Effect */
+        body { cursor: none; }
+        .crystal-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.8);
+            transition: all 0.3s ease;
+        }
+        .crystal-cursor.glow {
+            width: 40px;
+            height: 40px;
+            box-shadow: 0 0 40px rgba(52, 152, 219, 1);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #f8f9fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: none;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+        }
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.8);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        /* About */
+        .about {
+            background: #f8f9fa;
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: none;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: none;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        .project-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        .project-image {
+            height: 200px;
+            background: linear-gradient(45deg, #3498db, #9b59b6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        /* Experience */
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #3498db, #9b59b6);
+        }
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            width: 45%;
+            cursor: none;
+        }
+        .timeline-content.left {
+            margin-right: 55%;
+        }
+        .timeline-content.right {
+            margin-left: 55%;
+        }
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, #3498db, #9b59b6);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 4px white;
+            z-index: 1;
+        }
+
+        /* Contact */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-content { grid-template-columns: 1fr; }
+            .timeline::before { left: 20px; }
+            .timeline-content.left,
+            .timeline-content.right { width: 100%; margin: 0 0 0 60px; }
+            .timeline-dot { left: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Crystal Cursor -->
+    <div class="crystal-cursor" id="crystalCursor"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Muhammad Umar Butt</h1>
+            <p>Operations Coordinator | Web Developer | Quality Assurance Specialist</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div>
+                <h3>Analytical Professional with Technical Skills</h3>
+                <p>Detail-oriented Operations Coordinator with proven expertise in administrative coordination, quality assurance, and customer service. Self-taught web developer creating practical tools that solve real business problems.</p>
+                <p>Currently pursuing <strong>BSc Accounting & Finance</strong> at Allama Iqbal Open University while building modern web applications with HTML, CSS, JavaScript.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>🛠️ Operations</h4>
+                    <p>Process optimization, QA, admin coordination</p>
+                </div>
+                <div class="skill-card">
+                    <h4>💻 Web Development</h4>
+                    <p>HTML5, CSS3, JavaScript, Responsive Design</p>
+                </div>
+                <div class="skill-card">
+                    <h4>📊 Microsoft Office</h4>
+                    <p>Excel (Advanced), Word, PowerPoint, Data Analysis</p>
+                </div>
+                <div class="skill-card">
+                    <h4>🤝 Communication</h4>
+                    <p>English & Urdu | Stakeholder Management</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <a href="https://emifylogistics.com/comment-generator" class="project-card project-link" target="_blank">
+                <div class="project-image">💬</div>
+                <div class="project-content">
+                    <h3>Comment Generator v6</h3>
+                    <p>AI-powered assessment feedback tool for vocational educators. 8+ qualifications, 7 tone styles, crystal cursor effects.</p>
+                    <p><strong>Tech:</strong> HTML5, CSS3, JavaScript, Responsive Design</p>
+                </div>
+            </a>
+            <a href="https://emifylogistics.com/blog-list" class="project-card project-link" target="_blank">
+                <div class="project-image">📝</div>
+                <div class="project-content">
+                    <h3>Content Platform</h3>
+                    <p>Business blog platform covering logistics, operations, and industry insights for Emify Logistics.</p>
+                    <p><strong>Tech:</strong> HTML, CSS, Content Management</p>
+                </div>
+            </a>
+            <a href="#" class="project-card project-link">
+                <div class="project-image">⚙️</div>
+                <div class="project-content">
+                    <h3>Quality Dashboard</h3>
+                    <p>Internal QA tracking system for Disruption Tech operations (coming soon).</p>
+                    <p><strong>Tech:</strong> JavaScript, Data Visualization</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="about">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content left">
+                    <h3>Administrative & QA Coordinator</h3>
+                    <h4>Disruption Tech, Lahore | Jan 2024 – Present</h4>
+                    <ul>
+                        <li>Coordinate admin functions & QA processes for operational efficiency</li>
+                        <li>Develop quality control procedures & standards</li>
+                        <li>Manage project documentation & workflow optimization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content right">
+                    <h3>Operations Coordinator</h3>
+                    <h4>Emify Tech & Logistics, Lahore | Jan 2025 – May 2025</h4>
+                    <ul>
+                        <li>Supported logistics operations & admin workflows</li>
+                        <li>Managed documentation for business continuity</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content left">
+                    <h3>Customer Service Representative</h3>
+                    <h4>MindBridge, Lahore | Sep 2023 – Jan 2024</h4>
+                    <ul>
+                        <li>Delivered exceptional client support & issue resolution</li>
+                        <li>Maintained high customer satisfaction ratings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Let's Connect</h2>
+        <p>Ready for Operations, Admin Coordination, or Web Development opportunities!</p>
+        <div class="contact-links">
+            <a href="mailto:umer09061@gmail.com" class="btn btn-primary">📧 Email Me</a>
+            <a href="tel:+923160732605" class="btn btn-secondary">📱 Call: 0316-0732605</a>
+            <a href="https://github.com/yourusername" class="btn btn-secondary" target="_blank">🌐 GitHub</a>
+            <a href="#" class="btn btn-secondary" onclick="downloadCV()">📄 Download CV</a>
+        </div>
+        <p style="margin-top: 2rem; opacity: 0.8;">Lahore, Pakistan | Available for Remote/Hybrid Work</p>
+    </section>
+
+    <script>
+        // Crystal Cursor
+        const cursor = document.getElementById('crystalCursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        document.querySelectorAll('a, button, .skill-card, .project-card, .timeline-content').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('glow'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('glow'));
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255,255,255,0.98)';
+            } else {
+                nav.style.background = 'rgba(255,255,255,0.95)';
+            }
+        });
+
+        // Download CV
+        function downloadCV() {
+            // Replace with your actual CV link
+            window.open('Umar.CV.pdf', '_blank');
+        }
+
+        // Animate on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.skill-card, .project-card, .timeline-content').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
