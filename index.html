@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Umar Butt | Operations, Customer Support & AI Dev</title>
+    <title>Muhammad Umar Nadeem | Operations & Quality Assurance Specialist</title>
+    <meta name="description" content="Operations Coordinator & QA Specialist with experience in process improvement, quality control, CRM systems, and AI-driven workflow automation.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         :root {
             --primary: #3498db;
+            --primary-dark: #1e6fa8;
             --whatsapp: #25d366;
             --call: #3b82f6;
             --gmail: #ea4335;
             --dark: #0f172a;
+            --accent: #9b59b6;
+            --success: #10b981;
         }
 
         body {
@@ -22,16 +26,16 @@
             line-height: 1.6;
             color: #333;
             overflow-x: hidden;
-            cursor: none; /* Required for Crystal Cursor */
+            cursor: none;
             background: #f8f9fa;
         }
 
-        /* --- Crystal Cursor Effect --- */
+        /* --- Crystal Cursor --- */
         .crystal-cursor {
             position: fixed;
             width: 20px;
             height: 20px;
-            background: radial-gradient(circle, rgba(79, 94, 101, 0.9) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(52, 152, 219, 0.9) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
             z-index: 9999;
@@ -44,41 +48,168 @@
             width: 50px;
             height: 50px;
             box-shadow: 0 0 40px rgba(52, 152, 219, 1);
-            background: rgba(52, 152, 219, 0.1);
+            background: rgba(52, 152, 219, 0.15);
         }
 
         /* --- Navigation --- */
         nav {
             position: fixed;
             top: 0; width: 100%;
-            background: rgba(255,255,255,0.9);
+            background: rgba(255,255,255,0.92);
             backdrop-filter: blur(15px);
             z-index: 1000;
             padding: 1rem 0;
             box-shadow: 0 2px 20px rgba(0,0,0,0.05);
         }
-        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; }
-        nav a { text-decoration: none; color: #2c3e50; font-weight: 700; font-size: 0.9rem; transition: 0.3s; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; padding: 0 1rem; }
+        nav a {
+            text-decoration: none; color: #2c3e50; font-weight: 700;
+            font-size: 0.85rem; transition: 0.3s; letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
         nav a:hover { color: var(--primary); }
 
         /* --- Hero Section --- */
         .hero {
-            height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3a8a 0%, #667eea 50%, #764ba2 100%);
             display: flex; align-items: center; justify-content: center;
-            text-align: center; color: white;
+            text-align: center; color: white; padding: 100px 5% 60px;
+            position: relative; overflow: hidden;
         }
-        .hero-content h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin-bottom: 1rem; font-weight: 800; }
-        .hero-content p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem; }
+        .hero::before {
+            content: '';
+            position: absolute; top: -50%; right: -20%;
+            width: 700px; height: 700px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero::after {
+            content: '';
+            position: absolute; bottom: -30%; left: -10%;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(155, 89, 182, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 900px; }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        .hero-content h1 {
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            margin-bottom: 1rem; font-weight: 800;
+            line-height: 1.1;
+        }
+        .hero-content p.subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            opacity: 0.95; margin-bottom: 2rem;
+            max-width: 700px; margin-left: auto; margin-right: auto;
+        }
+        .hero-buttons {
+            display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+        }
+        .btn {
+            padding: 14px 32px; border-radius: 30px; text-decoration: none;
+            font-weight: 700; transition: 0.3s; font-size: 0.9rem;
+            display: inline-flex; align-items: center; gap: 8px;
+        }
+        .btn-primary { background: white; color: #10051b; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .btn-ghost {
+            background: transparent; color: white;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+        .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: white; }
 
-        /* --- Project Box Layout --- */
-        section { padding: 5rem 10%; max-width: 1400px; margin: 0 auto; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; font-weight: 800; }
+        /* --- Metrics Bar --- */
+        .metrics-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 3rem auto 0;
+            position: relative; z-index: 2;
+        }
+        .metric {
+            text-align: center;
+            padding: 1rem;
+            border-right: 1px solid rgba(255,255,255,0.15);
+        }
+        .metric:last-child { border-right: none; }
+        .metric-num {
+            font-size: 2rem; font-weight: 800; display: block;
+            color: white;
+        }
+        .metric-label {
+            font-size: 0.75rem; text-transform: uppercase;
+            letter-spacing: 1px; opacity: 0.8; font-weight: 600;
+        }
 
+        /* --- Sections --- */
+        section { padding: 6rem 8%; max-width: 1400px; margin: 0 auto; }
+        .section-tag {
+            text-align: center;
+            font-size: 0.75rem; font-weight: 800;
+            color: var(--primary); letter-spacing: 2px;
+            text-transform: uppercase; margin-bottom: 0.75rem;
+        }
+        .section-title {
+            text-align: center; font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 1rem; font-weight: 800; color: var(--dark);
+        }
+        .section-subtitle {
+            text-align: center; font-size: 0.95rem; opacity: 0.6;
+            max-width: 600px; margin: 0 auto 3rem;
+        }
+
+        /* --- Core Competencies --- */
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+        .competency-card {
+            background: white;
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+            transition: 0.35s;
+            border: 1px solid transparent;
+        }
+        .competency-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+            box-shadow: 0 18px 35px rgba(52, 152, 219, 0.12);
+        }
+        .comp-icon {
+            font-size: 1.8rem; color: var(--primary); margin-bottom: 1rem;
+            width: 55px; height: 55px;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 14px;
+        }
+        .competency-card h3 {
+            font-size: 1.1rem; color: var(--dark);
+            margin-bottom: 0.6rem; font-weight: 800;
+        }
+        .competency-card p {
+            font-size: 0.85rem; opacity: 0.7;
+        }
+
+        /* --- Projects --- */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
+            gap: 2rem;
         }
         .project-card {
             background: white;
@@ -95,74 +226,169 @@
         .project-card:hover {
             transform: translateY(-10px);
             border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(52, 152, 219, 0.1);
+            box-shadow: 0 20px 40px rgba(52, 152, 219, 0.12);
         }
-        .project-icon { font-size: 2.5rem; margin-bottom: 1.5rem; }
-        .project-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--dark); }
-        .project-card p { font-size: 0.95rem; opacity: 0.7; margin-bottom: 1.5rem; flex-grow: 1; }
-        .tag { font-size: 0.75rem; font-weight: 800; color: var(--primary); text-transform: uppercase; }
+        .project-icon { font-size: 2.3rem; margin-bottom: 1.2rem; }
+        .project-card h3 { font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--dark); }
+        .project-card p { font-size: 0.9rem; opacity: 0.7; margin-bottom: 1.5rem; flex-grow: 1; }
+        .tag {
+            font-size: 0.7rem; font-weight: 800; color: var(--primary);
+            text-transform: uppercase; letter-spacing: 1px;
+            margin-bottom: 0.5rem; display: inline-block;
+        }
+        .project-cta {
+            font-weight: 800; font-size: 0.8rem;
+            color: var(--primary); letter-spacing: 0.5px;
+        }
 
-        /* --- Wavy Timeline --- */
-        .timeline { position: relative; max-width: 800px; margin: 0 auto; }
-        .timeline::before {
-            content: ''; position: absolute; left: 50%; width: 4px; height: 100%;
-            background: linear-gradient(to bottom, #3498db, #9b59b6); transform: translateX(-50%);
+        /* --- Certificates --- */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.75rem;
         }
-        .timeline-item { display: flex; margin-bottom: 4rem; position: relative; width: 100%; }
+        .cert-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+            transition: 0.35s;
+            border: 1px solid rgba(0,0,0,0.03);
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .cert-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(52, 152, 219, 0.14);
+            border-color: var(--primary);
+        }
+        .cert-icon {
+            font-size: 2.2rem; margin-bottom: 1rem;
+            color: var(--primary);
+            width: 65px; height: 65px;
+            display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(135deg, rgba(52,152,219,0.1), rgba(155,89,182,0.1));
+            border-radius: 50%;
+        }
+        .cert-card h4 {
+            font-size: 1.1rem; font-weight: 800;
+            color: var(--dark); margin-bottom: 0.4rem;
+        }
+        .cert-issuer {
+            font-size: 0.72rem; font-weight: 800;
+            color: var(--primary); text-transform: uppercase;
+            letter-spacing: 1px; margin-bottom: 0.75rem;
+        }
+        .cert-desc {
+            font-size: 0.82rem; opacity: 0.7;
+            margin-bottom: 1.4rem; flex-grow: 1;
+        }
+        .cert-link {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 0.72rem; font-weight: 800;
+            text-decoration: none; color: var(--primary);
+            border: 1.5px solid var(--primary);
+            padding: 0.55rem 1.2rem; border-radius: 30px;
+            transition: 0.3s; text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .cert-link:hover {
+            background: var(--primary); color: white;
+            transform: translateY(-2px);
+        }
+
+        /* --- Timeline --- */
+        .timeline { position: relative; max-width: 900px; margin: 0 auto; }
+        .timeline::before {
+            content: ''; position: absolute; left: 50%; width: 3px; height: 100%;
+            background: linear-gradient(to bottom, #3498db, #9b59b6);
+            transform: translateX(-50%); border-radius: 3px;
+        }
+        .timeline-item { display: flex; margin-bottom: 3.5rem; position: relative; width: 100%; }
         .timeline-content {
-            background: white; padding: 2rem; border-radius: 20px;
-            width: 45%; box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            background: white; padding: 1.8rem; border-radius: 18px;
+            width: 45%; box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary);
         }
         .timeline-content.left { margin-right: 55%; }
-        .timeline-content.right { margin-left: 55%; }
+        .timeline-content.right { margin-left: 55%; border-left: none; border-right: 4px solid var(--accent); }
+        .timeline-content h3 { font-size: 1.05rem; color: var(--dark); margin-bottom: 0.4rem; }
+        .timeline-role {
+            font-size: 0.75rem; font-weight: 800;
+            color: var(--primary); text-transform: uppercase;
+            letter-spacing: 0.5px; margin-bottom: 0.75rem;
+        }
+        .timeline-content p.desc {
+            font-size: 0.85rem; opacity: 0.75; line-height: 1.6;
+        }
         .timeline-dot {
-            width: 20px; height: 20px; background: white; border: 4px solid var(--primary);
-            border-radius: 50%; position: absolute; left: 50%; transform: translateX(-50%); z-index: 2;
+            width: 18px; height: 18px; background: white;
+            border: 4px solid var(--primary); border-radius: 50%;
+            position: absolute; left: 50%; transform: translateX(-50%);
+            z-index: 2; top: 1.8rem;
         }
 
-        /* --- CONTACT BOX WITH CTA ICONS --- */
+        /* --- Contact --- */
         .contact-section {
             background: var(--dark);
             color: white;
-            padding: 80px 5%;
+            padding: 90px 5% 40px;
             border-radius: 50px 50px 0 0;
             text-align: center;
         }
+        .contact-section h2 {
+            font-size: clamp(1.6rem, 3vw, 2.3rem);
+            font-weight: 800; margin-bottom: 1rem;
+        }
+        .contact-section p.lead {
+            opacity: 0.7; font-size: 0.95rem; max-width: 600px;
+            margin: 0 auto;
+        }
         .cta-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
-            flex-wrap: wrap;
+            display: flex; justify-content: center;
+            gap: 28px; margin-top: 50px; flex-wrap: wrap;
         }
         .cta-icon-btn {
             position: relative;
-            width: 70px;
-            height: 70px;
+            width: 68px; height: 68px;
             background: rgba(255,255,255,0.05);
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            text-decoration: none; color: white; font-size: 1.5rem;
-            transition: 0.4s; border: 1px solid rgba(255,255,255,0.1);
+            text-decoration: none; color: white; font-size: 1.4rem;
+            transition: 0.4s; border: 1px solid rgba(255,255,255,0.12);
         }
         .cta-icon-btn span {
-            position: absolute; bottom: -35px; font-size: 0.7rem;
+            position: absolute; bottom: -35px; font-size: 0.65rem;
             font-weight: 800; opacity: 0; transition: 0.3s;
             text-transform: uppercase; white-space: nowrap;
+            letter-spacing: 0.5px;
         }
-        .cta-icon-btn:hover { background: white; color: var(--dark); transform: translateY(-10px); }
-        .cta-icon-btn:hover span { opacity: 1; bottom: -30px; color: white; }
-        
-        /* Icon Hover Colors */
+        .cta-icon-btn:hover {
+            background: white; color: var(--dark);
+            transform: translateY(-10px);
+        }
+        .cta-icon-btn:hover span { opacity: 1; bottom: -28px; color: white; }
         .wa-btn:hover { color: var(--whatsapp) !important; }
         .ph-btn:hover { color: var(--call) !important; }
         .em-btn:hover { color: var(--gmail) !important; }
+        .custom-cv-icon { font-weight: 800; font-size: 1.15rem; letter-spacing: 1px; }
 
+        .footer-note {
+            margin-top: 110px; opacity: 0.35;
+            font-size: 0.72rem; letter-spacing: 0.5px;
+        }
+
+        /* --- Responsive --- */
         @media (max-width: 768px) {
+            section { padding: 4rem 6%; }
             .timeline::before { left: 20px; }
-            .timeline-content { width: 85%; margin-left: 50px !important; }
+            .timeline-content { width: 85%; margin-left: 55px !important; }
+            .timeline-content.right { border-right: none; border-left: 4px solid var(--accent); }
             .timeline-dot { left: 20px; }
-            .hero-content h1 { font-size: 2.5rem; }
+            .metric { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 1rem; }
+            .metric:last-child { border-bottom: none; }
+            nav ul { gap: 1rem; }
+            nav a { font-size: 0.75rem; }
         }
     </style>
 </head>
@@ -173,80 +399,208 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
+            <li><a href="#expertise">Expertise</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
+    <!-- HERO -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Muhammad Umar Butt</h1>
-            <p>Operations & Procedure Coordinator | AI Web Developer | QA Specialist for Customer care support</p>
-            <div class="cta-buttons" style="display: flex; gap: 1rem; justify-content: center;">
-                <a href="#projects" class="btn" style="background: white; color: #10051b; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 700;">View Projects</a>
+            <div class="hero-badge">Operations & Quality Assurance</div>
+            <h1>Muhammad Umar Nadeem</h1>
+            <p class="subtitle">
+                Operations Coordinator & QA Specialist — building quality-controlled processes,
+                auditing workflows, and driving continuous improvement across operations, Compliance and Tech teams.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-briefcase"></i> View My Work
+                </a>
+                <a href="#contact" class="btn btn-ghost">
+                    <i class="fas fa-paper-plane"></i> Get In Touch
+                </a>
+            </div>
+
+            <div class="metrics-bar">
+                <div class="metric">
+                    <span class="metric-num">2+</span>
+                    <span class="metric-label">Years in Ops & QA</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-num">100%</span>
+                    <span class="metric-label">Audit Compliance</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-num">3</span>
+                    <span class="metric-label">Verified Certificates</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-num">3+</span>
+                    <span class="metric-label">Cross-functional Teams</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            
-            <a href="https://amify001-cpu.github.io/Commentgenerator/" target="_blank" class="project-card">
-                <div class="project-icon">💬</div>
-                <span class="tag">AI Comment generator / Education</span>
-                <h3>Comment Generator v6</h3>
-                <p>Advanced AI feedback engine for vocational educators. Supporting 8+ qualifications with multiple tone styles.</p>
-                <div style="font-weight: 800; font-size: 0.8rem; color: var(--primary);">OPEN LIVE SITE →</div>
-            </a>
+    <!-- CORE EXPERTISE -->
+    <section id="expertise">
+        <div class="section-tag">What I Do</div>
+        <h2 class="section-title">Core Competencies</h2>
+        <p class="section-subtitle">A blend of operational rigor, quality frameworks, and technical delivery.</p>
 
+        <div class="competencies-grid">
+            <div class="competency-card">
+                <div class="comp-icon"><i class="fas fa-clipboard-check"></i></div>
+                <h3>Quality Assurance</h3>
+                <p>Developing QA checklists, audit trails, and SOP documentation to ensure consistent output quality.</p>
+            </div>
+            <div class="competency-card">
+                <div class="comp-icon"><i class="fas fa-diagram-project"></i></div>
+                <h3>Process Optimization</h3>
+                <p>Mapping workflows, identifying bottlenecks, and streamlining operations for measurable efficiency gains.</p>
+            </div>
+            <div class="competency-card">
+                <div class="comp-icon"><i class="fas fa-headset"></i></div>
+                <h3>Customer Care QA</h3>
+                <p>Monitoring ticket quality, call calibrations, and CSAT metrics for support teams across regions.</p>
+            </div>
+            <div class="competency-card">
+                <div class="comp-icon"><i class="fas fa-file-shield"></i></div>
+                <h3>Compliance & Documentation</h3>
+                <p>Maintaining audit-ready documentation aligned with internal policy and industry standards.</p>
+            </div>
+            <div class="competency-card">
+                <div class="comp-icon"><i class="fas fa-robot"></i></div>
+                <h3>AI & Automation</h3>
+                <p>Building lightweight AI tools and CRMs to reduce manual effort in ops and reporting tasks.</p>
+            </div>
+            <div class="competency-card">
+                <div class="comp-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Reporting & Analytics</h3>
+                <p>Designing KPI dashboards that surface operational trends for faster, evidence-based decisions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="section-tag">Portfolio</div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Practical tools I've built to solve real operational and QA problems.</p>
+
+        <div class="projects-grid">
             <a href="https://amify001-cpu.github.io/Car-Crm/" target="_blank" class="project-card">
                 <div class="project-icon">⚙️</div>
                 <span class="tag">Operations / CRM</span>
                 <h3>Car Garage POS</h3>
-                <p>Tracking system for Order Management, Reporting, and Inventory control with safety access protocols.</p>
-                <div style="font-weight: 800; font-size: 0.8rem; color: var(--primary);">OPEN LIVE SITE →</div>
+                <p>End-to-end order management and inventory tracking system built with reporting dashboards and role-based access controls for QA oversight.</p>
+                <span class="project-cta">OPEN LIVE SITE →</span>
             </a>
+
+            <a href="https://amify001-cpu.github.io/Commentgenerator/" target="_blank" class="project-card">
+                <div class="project-icon">💬</div>
+                <span class="tag">AI / Education</span>
+                <h3>AI Comment Generator v6</h3>
+                <p>AI feedback engine for vocational educators — supporting 8+ qualifications with tone-controlled responses to standardize assessment quality.</p>
+                <span class="project-cta">OPEN LIVE SITE →</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates">
+        <div class="section-tag">Verified Credentials</div>
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">Formal training supporting my operations and QA foundation.</p>
+
+        <div class="certificates-grid">
+
+            <!-- Food Safety Certificate -->
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-utensils"></i></div>
+                <h4>Food Safety Certificate</h4>
+                <div class="cert-issuer">Verified • MUB</div>
+                <p class="cert-desc">Certified training in food hygiene, safety protocols, and handling standards — reinforcing compliance-driven QA practices.</p>
+                <a href="https://drive.google.com/file/d/1fFkecX_OhaLNUPAK_C79oMfEmCH4IiYN/view?usp=drive_link"
+                   class="cert-link" target="_blank" rel="noopener">
+                    <i class="fas fa-file-pdf"></i> View Certificate
+                </a>
+            </div>
+
+            <!-- Soft Skills Certificate -->
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-users"></i></div>
+                <h4>Soft Skills Certificate</h4>
+                <div class="cert-issuer">Professional Development</div>
+                <p class="cert-desc">Communication, teamwork, and workplace professionalism — essential skills for cross-team QA coordination and stakeholder management.</p>
+                <a href="https://drive.google.com/file/d/16xdYp61JFWQCyGVtA1ShNryaF4GeuXrz/view?usp=drive_link"
+                   class="cert-link" target="_blank" rel="noopener">
+                    <i class="fas fa-file-pdf"></i> View Certificate
+                </a>
+            </div>
+
+            <!-- CR1202 Certificate -->
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-award"></i></div>
+                <h4>CR1202 Certificate</h4>
+                <div class="cert-issuer">Certified • Umer</div>
+                <p class="cert-desc">Formal certification aligned with CR1202 standards — supporting process adherence and quality assurance frameworks.</p>
+                <a href="https://drive.google.com/file/d/10nL-JbDcMAQHrEVo1yOKNBBh59YB5xrT/view?usp=drive_link"
+                   class="cert-link" target="_blank" rel="noopener">
+                    <i class="fas fa-file-pdf"></i> View Certificate
+                </a>
+            </div>
 
         </div>
     </section>
 
+    <!-- EXPERIENCE -->
     <section id="experience">
+        <div class="section-tag">Career Journey</div>
         <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">A track record of building quality into operations across three organizations.</p>
+
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content left">
-                    <h3 style="font-size: 1.1rem;">Administrative & QA Coordinator</h3>
-                    <p style="font-size: 0.8rem; font-weight: 800; color: var(--primary);">Disruption Tech | 2024 – Present</p>
-                    <p style="font-size: 0.85rem; margin-top: 10px;">Developing quality control procedures and managing administrative workflows.</p>
+                    <h3>Administrative & QA Coordinator</h3>
+                    <div class="timeline-role">Disruption Tech • 2024 – Present</div>
+                    <p class="desc">Designing quality control procedures, maintaining audit documentation, and managing administrative workflows to ensure compliance and operational consistency.</p>
                 </div>
             </div>
+
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content right">
-                    <h3 style="font-size: 1.1rem;">Operations Coordinator</h3>
-                    <p style="font-size: 0.8rem; font-weight: 800; color: var(--primary);">Emify Tech | Jan 2025 – May 2025</p>
-                    <p style="font-size: 0.85rem; margin-top: 10px;">Managed logistics operations and business continuity documentation.</p>
+                    <h3>Operations Coordinator <i>(Remote-Part Time)</i></h3>
+                    <div class="timeline-role">Emify Tech • Jan 2025 – May 2025</div>
+                    <p class="desc">Oversaw logistics operations, standardized business continuity documentation, and coordinated cross-functional teams to hit operational SLAs.</p>
                 </div>
             </div>
-                <div class="timeline-item">
+
+            <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content left">
-                    <h3 style="font-size: 1.1rem;">Customer Care representative</h3>
-                    <p style="font-size: 0.8rem; font-weight: 800; color: var(--primary);">Mindbridge | Sep 2023 –  Jan 2024</p>
-                    <p style="font-size: 0.85rem; margin-top: 10px;">Worked in the menu designs and App client assistance for a GCC based Delivering Company</p>
+                    <h3>Customer Care Representative</h3>
+                    <div class="timeline-role">Mindbridge • Sep 2023 – Jan 2024</div>
+                    <p class="desc">Supported menu design and app client assistance for a GCC-based delivery company — directly handling quality-sensitive customer interactions and escalation resolution.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="contact-section">
-        <h2 style="font-size: 2.5rem; font-weight: 800;">Let's Connect to make every project a seamless</h2>
-        
+        <h2>Let's build quality into every process.</h2>
+        <p class="lead">Open to Operations Coordinator, QA Specialist, and Process Improvement roles — remote or on-site.</p>
+
         <div class="cta-container">
-            <a href="https://wa.me/923214006374" class="cta-icon-btn wa-btn" target="_blank">
+            <a href="https://wa.me/923214006374" class="cta-icon-btn wa-btn" target="_blank" rel="noopener">
                 <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
             </a>
 
@@ -258,33 +612,36 @@
                 <i class="fas fa-envelope"></i><span>Email</span>
             </a>
 
-            <a href="https://drive.google.com/file/d/1ic7EBh75uBzsQx_dnTV--TQsYnqPn2k9/view?usp=sharing" class="cta-icon-btn cv-btn" target="_blank">
-    <div class="custom-cv-icon">CV</div>
-    <span>Resume</span>
-             </a>
+            <a href="https://drive.google.com/file/d/1ic7EBh75uBzsQx_dnTV--TQsYnqPn2k9/view?usp=sharing"
+               class="cta-icon-btn cv-btn" target="_blank" rel="noopener">
+                <div class="custom-cv-icon">CV</div>
+                <span>Resume</span>
+            </a>
 
-            <a href="https://github.com/amify001-cpu" class="cta-icon-btn" target="_blank">
+            <a href="https://github.com/amify001-cpu" class="cta-icon-btn" target="_blank" rel="noopener">
                 <i class="fab fa-github"></i><span>GitHub</span>
             </a>
         </div>
-   
-        <div style="margin-top: 100px; opacity: 0.3; font-size: 0.75rem;">
-            LAHORE, PAKISTAN • © Current Year. All rights reserved. Designed by Muhammad Umar Butt.
+
+        <div class="footer-note">
+            LAHORE, PAKISTAN • © 2025 Muhammad Umar Butt. All rights reserved.
         </div>
     </section>
 
     <script>
+        /* --- Crystal Cursor --- */
         const cursor = document.getElementById('crystalCursor');
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
 
-        document.querySelectorAll('a, .project-card, .timeline-content').forEach(el => {
+        document.querySelectorAll('a, .project-card, .timeline-content, .cert-card, .competency-card').forEach(el => {
             el.addEventListener('mouseenter', () => cursor.classList.add('glow'));
             el.addEventListener('mouseleave', () => cursor.classList.remove('glow'));
         });
 
+        /* --- Scroll Animation --- */
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -294,7 +651,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.project-card, .timeline-content').forEach(el => {
+        document.querySelectorAll('.project-card, .timeline-content, .cert-card, .competency-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(40px)';
             el.style.transition = 'all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1)';
