@@ -3,338 +3,171 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muhammad Umar Nadeem | Operations & Quality Assurance Specialist</title>
-<meta name="description" content="Operations Coordinator & QA Specialist with experience in process improvement, quality control, CRM systems, and AI-driven workflow automation.">
+<title>Muhammad Umar Nadeem | Administration, Compliance & Operations Professional</title>
+<meta name="description" content="Administration, Compliance & Operations Professional with Quality Assurance experience, Financial & Accounting studies, and training in Data Analytics, Business Intelligence and AI productivity.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-:root {
-    --primary: #3498db; --primary-dark: #1e6fa8; --whatsapp: #25d366; --call: #3b82f6;
-    --gmail: #ea4335; --dark: #0f172a; --accent: #9b59b6; --success: #10b981;
-}
-body { font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; cursor: none; background: #f8f9fa; }
-
-/* Crystal Cursor */
-.crystal-cursor {
-    position: fixed; width: 20px; height: 20px;
-    background: radial-gradient(circle, rgba(52,152,219,0.9) 0%, transparent 70%);
-    border-radius: 50%; pointer-events: none; z-index: 9999; backdrop-filter: blur(10px);
-    box-shadow: 0 0 20px rgba(52,152,219,0.8); transform: translate(-50%, -50%);
-    transition: width 0.3s, height 0.3s, box-shadow 0.3s;
-}
-.crystal-cursor.glow { width: 50px; height: 50px; box-shadow: 0 0 40px rgba(52,152,219,1); background: rgba(52,152,219,0.15); }
-
-/* Navigation */
-nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.92); backdrop-filter: blur(15px); z-index: 1000; padding: 1rem 0; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
-nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; padding: 0 1rem; }
-nav a { text-decoration: none; color: #2c3e50; font-weight: 700; font-size: 0.85rem; transition: 0.3s; letter-spacing: 0.3px; text-transform: uppercase; }
-nav a:hover { color: var(--primary); }
-
-/* Hero */
-.hero {
-    min-height: 100vh; background: linear-gradient(135deg, #1e3a8a 0%, #667eea 50%, #764ba2 100%);
-    display: flex; align-items: center; justify-content: center; text-align: center; color: white;
-    padding: 100px 5% 60px; position: relative; overflow: hidden;
-}
-.hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%); border-radius: 50%; }
-.hero::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(155,89,182,0.2) 0%, transparent 70%); border-radius: 50%; }
-.hero-content { position: relative; z-index: 2; max-width: 900px; }
-.hero-badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); padding: 8px 20px; border-radius: 30px; font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.5rem; }
-.hero-content h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); margin-bottom: 1rem; font-weight: 800; line-height: 1.1; }
-.hero-content p.subtitle { font-size: clamp(1rem, 2vw, 1.25rem); opacity: 0.95; margin: 0 auto 2rem; max-width: 700px; }
-.hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-.btn { padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: 700; transition: 0.3s; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; }
-.btn-primary { background: white; color: #10051b; }
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
-.btn-ghost { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.5); }
-.btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: white; }
-
-/* Metrics */
-.metrics-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; max-width: 1000px; margin: 3rem auto 0; position: relative; z-index: 2; }
-.metric { text-align: center; padding: 1rem; border-right: 1px solid rgba(255,255,255,0.15); }
-.metric:last-child { border-right: none; }
-.metric-num { font-size: 2rem; font-weight: 800; display: block; color: white; }
-.metric-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.8; font-weight: 600; }
-
-/* Sections */
-section { padding: 6rem 8%; max-width: 1400px; margin: 0 auto; }
-.section-tag { text-align: center; font-size: 0.75rem; font-weight: 800; color: var(--primary); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.75rem; }
-.section-title { text-align: center; font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1rem; font-weight: 800; color: var(--dark); }
-.section-subtitle { text-align: center; font-size: 0.95rem; opacity: 0.6; max-width: 600px; margin: 0 auto 3rem; }
-
-/* Competencies */
-.competencies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
-.competency-card { background: white; padding: 2rem 1.5rem; border-radius: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.04); transition: 0.35s; border: 1px solid transparent; }
-.competency-card:hover { transform: translateY(-6px); border-color: var(--primary); box-shadow: 0 18px 35px rgba(52,152,219,0.12); }
-.comp-icon { font-size: 1.8rem; color: var(--primary); margin-bottom: 1rem; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; background: rgba(52,152,219,0.1); border-radius: 14px; }
-.competency-card h3 { font-size: 1.1rem; color: var(--dark); margin-bottom: 0.6rem; font-weight: 800; }
-.competency-card p { font-size: 0.85rem; opacity: 0.7; }
-
-/* Projects */
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
-.project-card { background: white; border-radius: 25px; padding: 2rem; text-decoration: none; color: inherit; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.4s; display: flex; flex-direction: column; border: 1px solid transparent; }
-.project-card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(52,152,219,0.12); }
-.project-icon { font-size: 2.3rem; margin-bottom: 1.2rem; }
-.project-card h3 { font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--dark); }
-.project-card p { font-size: 0.9rem; opacity: 0.7; margin-bottom: 1.5rem; flex-grow: 1; }
-.tag { font-size: 0.7rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; display: inline-block; }
-.project-cta { font-weight: 800; font-size: 0.8rem; color: var(--primary); letter-spacing: 0.5px; }
-
-/* Certificates (redesigned to match competency/project cards) */
-.certificates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-.cert-card {
-    position: relative; overflow: hidden; background: white; border-radius: 20px;
-    padding: 2rem 1.5rem 1.75rem; display: flex; flex-direction: column;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.04); border: 1px solid transparent; transition: 0.35s;
-}
-.cert-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
-.cert-card:hover { transform: translateY(-6px); border-color: var(--primary); box-shadow: 0 18px 35px rgba(52,152,219,0.12); }
-.cert-head { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 1.1rem; }
-.cert-icon { flex-shrink: 0; font-size: 1.5rem; color: var(--primary); width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(52,152,219,0.1), rgba(155,89,182,0.1)); border-radius: 14px; }
-.cert-issuer { font-size: 0.7rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; line-height: 1.3; }
-.cert-card h4 { font-size: 1.1rem; font-weight: 800; color: var(--dark); margin-bottom: 0.6rem; }
-.cert-desc { font-size: 0.85rem; opacity: 0.7; margin-bottom: 1rem; }
-.cert-skills { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.4rem; flex-grow: 1; align-content: flex-start; }
-.cert-skills li { font-size: 0.7rem; font-weight: 700; color: var(--primary-dark); background: rgba(52,152,219,0.08); padding: 0.25rem 0.7rem; border-radius: 30px; }
-.cert-link { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; color: var(--primary); border: 1.5px solid var(--primary); padding: 0.55rem 1.2rem; border-radius: 30px; transition: 0.3s; text-transform: uppercase; letter-spacing: 0.5px; }
-.cert-link:hover { background: var(--primary); color: white; transform: translateY(-2px); }
-
-/* Timeline */
-.timeline { position: relative; max-width: 900px; margin: 0 auto; }
-.timeline::before { content: ''; position: absolute; left: 50%; width: 3px; height: 100%; background: linear-gradient(to bottom, #3498db, #9b59b6); transform: translateX(-50%); border-radius: 3px; }
-.timeline-item { display: flex; margin-bottom: 3.5rem; position: relative; width: 100%; }
-.timeline-content { background: white; padding: 1.8rem; border-radius: 18px; width: 45%; box-shadow: 0 8px 25px rgba(0,0,0,0.05); border-left: 4px solid var(--primary); }
-.timeline-content.left { margin-right: 55%; }
-.timeline-content.right { margin-left: 55%; border-left: none; border-right: 4px solid var(--accent); }
-.timeline-content h3 { font-size: 1.05rem; color: var(--dark); margin-bottom: 0.4rem; }
-.timeline-role { font-size: 0.75rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.75rem; }
-.timeline-content p.desc { font-size: 0.85rem; opacity: 0.75; line-height: 1.6; }
-.timeline-dot { width: 18px; height: 18px; background: white; border: 4px solid var(--primary); border-radius: 50%; position: absolute; left: 50%; transform: translateX(-50%); z-index: 2; top: 1.8rem; }
-
-/* Contact */
-.contact-section { background: var(--dark); color: white; padding: 90px 5% 40px; border-radius: 50px 50px 0 0; text-align: center; }
-.contact-section h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 800; margin-bottom: 1rem; }
-.contact-section p.lead { opacity: 0.7; font-size: 0.95rem; max-width: 600px; margin: 0 auto; }
-.cta-container { display: flex; justify-content: center; gap: 28px; margin-top: 50px; flex-wrap: wrap; }
-.cta-icon-btn { position: relative; width: 68px; height: 68px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; color: white; font-size: 1.4rem; transition: 0.4s; border: 1px solid rgba(255,255,255,0.12); }
-.cta-icon-btn span { position: absolute; bottom: -35px; font-size: 0.65rem; font-weight: 800; opacity: 0; transition: 0.3s; text-transform: uppercase; white-space: nowrap; letter-spacing: 0.5px; }
-.cta-icon-btn:hover { background: white; color: var(--dark); transform: translateY(-10px); }
-.cta-icon-btn:hover span { opacity: 1; bottom: -28px; color: white; }
-.wa-btn:hover { color: var(--whatsapp) !important; }
-.ph-btn:hover { color: var(--call) !important; }
-.em-btn:hover { color: var(--gmail) !important; }
-.custom-cv-icon { font-weight: 800; font-size: 1.15rem; letter-spacing: 1px; }
-.footer-note { margin-top: 110px; opacity: 0.35; font-size: 0.72rem; letter-spacing: 0.5px; }
-
-/* Responsive */
-@media (max-width: 768px) {
-    section { padding: 4rem 6%; }
-    .timeline::before { left: 20px; }
-    .timeline-content { width: 85%; margin-left: 55px !important; }
-    .timeline-content.right { border-right: none; border-left: 4px solid var(--accent); }
-    .timeline-dot { left: 20px; }
-    .metric { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 1rem; }
-    .metric:last-child { border-bottom: none; }
-    nav ul { gap: 1rem; }
-    nav a { font-size: 0.75rem; }
-}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#0f2742;--blue:#1f6feb;--blue-d:#1856b8;--teal:#0f9d8a;--ink:#1e293b;--muted:#5b6b7f;--line:#e3e8ef;--bg:#f6f8fb}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;line-height:1.65;color:var(--ink);background:var(--bg);overflow-x:hidden}
+a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);z-index:100;padding:.9rem 0;border-bottom:1px solid var(--line)}
+nav ul{list-style:none;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;padding:0 1rem}
+nav a{text-decoration:none;color:var(--navy);font-weight:600;font-size:.88rem}
+nav a:hover{color:var(--blue)}
+.hero{background:var(--navy);color:#fff;padding:140px 8% 70px}
+.hero-in{max-width:1100px;margin:0 auto}
+.hero h1{font-size:clamp(2.3rem,6vw,3.8rem);font-weight:800;line-height:1.08;margin-bottom:.6rem;font-style:Bold}
+.hero .role{font-size:clamp(1.05rem,2.2vw,1.35rem);color:#9cc4ff;font-weight:600;margin-bottom:1.4rem}
+.hero .summary{max-width:720px;font-size:1.02rem;color:#d5e0ee;margin-bottom:2rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{padding:13px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:.92rem;display:inline-flex;align-items:center;gap:8px;transition:.25s}
+.btn-p{background:#fff;color:var(--navy)}.btn-p:hover{background:#e6efff}
+.btn-g{border:1.5px solid rgba(255,255,255,.5);color:#fff}.btn-g:hover{background:rgba(255,255,255,.1)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:3.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.18)}
+.facts div{font-size:.88rem;color:#b9c8da}
+.facts strong{display:block;color:#fff;font-size:1rem;margin-bottom:.15rem}
+section.block{padding:5.5rem 8%;max-width:1300px;margin:0 auto}
+h2.title{font-size:clamp(1.7rem,3.6vw,2.3rem);font-weight:800;color:var(--navy);margin-bottom:.6rem}
+p.sub{color:var(--muted);max-width:640px;margin-bottom:2.5rem}
+.grid{display:grid;gap:1.5rem}
+.g-comp{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g-proj{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g-cert{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.7rem;display:flex;flex-direction:column}
+.icon{width:46px;height:46px;border-radius:10px;background:#e8f0fe;color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1rem}
+.card h3,.card h4{font-size:1.08rem;color:var(--navy);margin-bottom:.5rem;font-weight:800}
+.card p{font-size:.9rem;color:var(--muted);margin-bottom:1rem;flex-grow:1}
+.tags{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem}
+.tags li{font-size:.75rem;font-weight:600;color:var(--blue-d);background:#eef4ff;padding:.25rem .7rem;border-radius:20px}
+.kind{font-size:.78rem;font-weight:700;color:var(--teal);margin-bottom:.4rem}
+.cert{border-top:4px solid var(--blue)}
+.cert.new{border-top-color:var(--teal)}
+.cert .issuer{font-size:.78rem;font-weight:600;color:var(--muted);margin-bottom:.4rem}
+.cert a,.proj-link{align-self:flex-start;margin-top:1rem;font-size:.82rem;font-weight:700;color:var(--blue);text-decoration:none;border:1.5px solid var(--blue);padding:.45rem 1rem;border-radius:8px}
+.cert a:hover,.proj-link:hover{background:var(--blue);color:#fff}
+.status{font-size:.78rem;font-weight:600;color:var(--teal)}
+.group-label{font-size:1rem;font-weight:800;color:var(--navy);margin:2.5rem 0 1rem}
+.timeline{border-left:3px solid var(--line);margin-left:.5rem;max-width:860px}
+.job{position:relative;padding:0 0 2.2rem 2rem}
+.job::before{content:'';position:absolute;left:-9px;top:.35rem;width:15px;height:15px;border-radius:50%;background:#fff;border:4px solid var(--blue)}
+.job h3{color:var(--navy);font-size:1.1rem}
+.job .when{font-size:.84rem;font-weight:600;color:var(--blue);margin:.15rem 0 .6rem}
+.job p{font-size:.92rem;color:var(--muted);max-width:680px}
+.contact{background:var(--navy);color:#fff;text-align:center;padding:5rem 8% 2.5rem}
+.contact h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:.8rem}
+.contact p{color:#b9c8da;max-width:620px;margin:0 auto}
+.links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2.2rem}
+.links a{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.3);padding:.7rem 1.3rem;border-radius:8px;font-weight:600;font-size:.9rem;display:inline-flex;gap:8px;align-items:center;transition:.25s}
+.links a:hover{background:#fff;color:var(--navy)}
+.foot{margin-top:3.5rem;font-size:.78rem;color:#7f93ab}
+.hero-in>*{animation:rise .7s ease both}
+.hero-in>*:nth-child(2){animation-delay:.08s}.hero-in>*:nth-child(3){animation-delay:.16s}.hero-in>*:nth-child(4){animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:768px){section.block{padding:4rem 6%}.hero{padding:120px 6% 50px}nav ul{gap:1rem}nav a{font-size:.8rem}}
 </style>
 </head>
 <body>
 
-<div class="crystal-cursor" id="crystalCursor"></div>
-
 <nav>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#expertise">Expertise</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<ul>
+<li><a href="#home">Home</a></li><li><a href="#competencies">Competencies</a></li><li><a href="#certificates">Certifications</a></li>
+<li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
-<!-- HERO -->
-<section id="home" class="hero">
-    <div class="hero-content">
-        <div class="hero-badge">Operations & Quality Assurance</div>
-        <h1>Muhammad Umar Nadeem</h1>
-        <p class="subtitle">Operations Coordinator & QA Specialist — building quality-controlled processes, auditing workflows, and driving continuous improvement across operations, Compliance and Tech teams.</p>
-        <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary"><i class="fas fa-briefcase"></i> View My Work</a>
-            <a href="#contact" class="btn btn-ghost"><i class="fas fa-paper-plane"></i> Get In Touch</a>
-        </div>
-        <div class="metrics-bar">
-            <div class="metric"><span class="metric-num">2+</span><span class="metric-label">Years in Ops & QA</span></div>
-            <div class="metric"><span class="metric-num">100%</span><span class="metric-label">Audit Compliance</span></div>
-            <div class="metric"><span class="metric-num">4</span><span class="metric-label">Verified Certificates</span></div>
-            <div class="metric"><span class="metric-num">3+</span><span class="metric-label">Cross-functional Teams</span></div>
-        </div>
-    </div>
+<header id="home" class="hero">
+<div class="hero-in">
+<h1>Muhammad Umar Nadeem</h1>
+<p class="role">Administration, Compliance & Operations Professional</p>
+<p class="summary">I coordinate day-to-day operations, maintain audit-ready documentation, and run quality assurance checks that keep teams consistent. I am completing a Bachelor's degree in Financial &amp; Accounting, and I use training in data analytics, business intelligence and AI productivity tools to make reporting clearer and routine work faster.</p>
+<div class="btns">
+<a href="#projects" class="btn btn-p"><i class="fas fa-briefcase"></i> View my work</a>
+<a href="#contact" class="btn btn-g"><i class="fas fa-paper-plane"></i> Get in touch</a>
+</div>
+<div class="facts">
+<div><strong>Quality Assurance</strong>Audit documentation, SOPs, checklists</div>
+<div><strong>Operations coordination</strong>Workflows, reporting, stakeholder updates</div>
+<div><strong>Financial &amp; Accounting studies</strong>Bachelor's degree in progress</div>
+<div><strong>Data &amp; AI skills</strong>Business intelligence, analytics, ChatGPT</div>
+</div>
+</div>
+</header>
+
+<section id="competencies" class="block">
+<h2 class="title">Core competencies</h2>
+<p class="sub">Administration, compliance and operations come first. Analytics, finance and AI skills support that work.</p>
+<div class="grid g-comp">
+<div class="card"><div class="icon"><i class="fas fa-people-gear"></i></div><h3>Administration &amp; Operations</h3><p>Coordinating schedules, workflows and cross-team tasks, and keeping records and communication in order.</p><ul class="tags"><li>Operations coordination</li><li>Documentation</li><li>Training support</li><li>Stakeholder communication</li></ul></div>
+<div class="card"><div class="icon"><i class="fas fa-clipboard-check"></i></div><h3>Compliance &amp; Quality Assurance</h3><p>Building QA checklists and audit trails, and keeping documentation aligned with internal policy.</p><ul class="tags"><li>Quality assurance</li><li>Audit documentation</li><li>SOPs</li><li>Process improvement</li></ul></div>
+<div class="card"><div class="icon"><i class="fas fa-chart-column"></i></div><h3>Reporting &amp; Business Intelligence</h3><p>Turning operational data into KPI reports and dashboard views that support clearer decisions.</p><ul class="tags"><li>KPI reporting</li><li>Power BI fundamentals</li><li>Dashboard concepts</li><li>Excel</li></ul></div>
+<div class="card"><div class="icon"><i class="fas fa-magnifying-glass-chart"></i></div><h3>Data Analytics</h3><p>Reading and cleaning data, spotting trends, and explaining findings in plain language.</p><ul class="tags"><li>Data interpretation</li><li>Data visualization</li><li>Statistics fundamentals</li><li>Analytical thinking</li></ul></div>
+<div class="card"><div class="icon"><i class="fas fa-calculator"></i></div><h3>Financial &amp; Accounting Fundamentals</h3><p>Studying for a Bachelor's degree in Financial &amp; Accounting, which brings accuracy and cost awareness to reporting and record-keeping.</p><ul class="tags"><li>Accounting principles</li><li>Financial reporting basics</li><li>Accuracy &amp; reconciliation</li></ul></div>
+<div class="card"><div class="icon"><i class="fas fa-robot"></i></div><h3>AI Productivity &amp; Automation</h3><p>Using ChatGPT and lightweight tools to draft, summarize and automate repetitive administrative work.</p><ul class="tags"><li>Prompt engineering</li><li>Workflow automation</li><li>AI-assisted drafting</li></ul></div>
+</div>
 </section>
 
-<!-- CORE EXPERTISE -->
-<section id="expertise">
-    <div class="section-tag">What I Do</div>
-    <h2 class="section-title">Core Competencies</h2>
-    <p class="section-subtitle">A blend of operational rigor, quality frameworks, and technical delivery.</p>
-    <div class="competencies-grid">
-        <div class="competency-card"><div class="comp-icon"><i class="fas fa-clipboard-check"></i></div><h3>Quality Assurance</h3><p>Developing QA checklists, audit trails, and SOP documentation to ensure consistent output quality.</p></div>
-        <div class="competency-card"><div class="comp-icon"><i class="fas fa-diagram-project"></i></div><h3>Process Optimization</h3><p>Mapping workflows, identifying bottlenecks, and streamlining operations for measurable efficiency gains.</p></div>
-        <div class="competency-card"><div class="comp-icon"><i class="fas fa-headset"></i></div><h3>Customer Care QA</h3><p>Monitoring ticket quality, call calibrations, and CSAT metrics for support teams across regions.</p></div>
-        <div class="competency-card"><div class="comp-icon"><i class="fas fa-file-shield"></i></div><h3>Compliance & Documentation</h3><p>Maintaining audit-ready documentation aligned with internal policy and industry standards.</p></div>
-        <div class="competency-card"><div class="comp-icon"><i class="fas fa-robot"></i></div><h3>AI & Automation</h3><p>Building lightweight AI tools and CRMs to reduce manual effort in ops and reporting tasks.</p></div>
-        <div class="competency-card"><div class="comp-icon"><i class="fas fa-chart-line"></i></div><h3>Reporting & Analytics</h3><p>Designing KPI dashboards that surface operational trends for faster, evidence-based decisions.</p></div>
-    </div>
+<section id="certificates" class="block">
+<h2 class="title">Certifications</h2>
+<p class="sub">Recent training in analytics, e-commerce and AI, alongside earlier certificates in Excel, BI, safety and soft skills.</p>
+<h3 class="group-label">Recently Obtained</h3>
+<div class="grid g-cert">
+<div class="card cert new"><div class="icon"><i class="fas fa-chart-pie"></i></div><h4>Data Analytics &amp; Business Intelligence</h4><p>Reporting and dashboard training that supports KPI tracking and performance review.</p><ul class="tags"><li>KPI reporting</li><li>Dashboard concepts</li><li>Business intelligence</li><li>Power BI fundamentals</li><li>Data visualization</li></ul><a href="https://drive.google.com/file/d/1I-E9Ghc_3hC0JRZO07VS8cKjt9ZpPbDE/view?usp=sharing" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> View certificate</a></div>
+<div class="card cert new"><div class="icon"><i class="fas fa-store"></i></div><h4>E-Commerce Management</h4><p>Understanding how online businesses run, from marketplace operations to customer experience.</p><ul class="tags"><li>Marketplace operations</li><li>Digital commerce</li><li>Customer experience</li><li>Online business management</li></ul><a href="https://drive.google.com/file/d/1VA08SIY2YDEoifs8wMg2i27W1pXBbIYn/view?usp=drive_link" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> View certificate</a></div>
+<div class="card cert new"><div class="icon"><i class="fas fa-comments"></i></div><h4>Master of ChatGPT</h4><p>Practical use of AI to save time on writing, summaries and routine admin tasks.</p><ul class="tags"><li>Prompt engineering</li><li>AI productivity</li><li>Workflow automation</li><li>Business communication</li></ul><a href="https://drive.google.com/file/d/1kC5wg1fJGAAWGZMo7h6RVm8EbXgDA0Xj/view?usp=sharing" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> View certificate</a></div>
+<div class="card cert new"><div class="icon"><i class="fas fa-flask"></i></div><h4>Basics of Data Science</h4><p>Foundations for reading data and drawing sensible conclusions for business use.</p><ul class="tags"><li>Data interpretation</li><li>Statistics fundamentals</li><li>Analytical thinking</li><li>Business insights</li></ul><a href="https://drive.google.com/file/d/1S2IKxAvuvwvyTvia2A05AiJ665zwyvJC/view?usp=sharing" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> View certificate</a></div>
+</div>
+<h3 class="group-label">Earlier certificates</h3>
+<div class="grid g-cert">
+<div class="card cert"><div class="icon"><i class="fas fa-table"></i></div><div class="issuer">Certified • Umer</div><h4>Advanced Level Excel</h4><p>Advanced spreadsheet training for tracking, reporting, and cleaning operational data.</p><ul class="tags"><li>Formulas</li><li>Data analysis</li><li>Reporting</li></ul><a href="https://drive.google.com/file/d/10nL-JbDcMAQHrEVo1yOKNBBh59YB5xrT/view?usp=drive_link" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> View certificate</a></div>
+<div class="card cert"><div class="icon"><i class="fas fa-chart-column"></i></div><div class="issuer">Professional Development</div><h4>Power BI: Basics of DAX</h4><p>DAX fundamentals that strengthen business intelligence and data analysis skills.</p><ul class="tags"><li>DAX</li><li>Power BI</li><li>Business intelligence</li></ul><a href="https://drive.google.com/file/d/1T_5R3JSUsQ_Vze31rbd9cRoS687TPkaM/view?usp=sharing" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> View certificate</a></div>
+<div class="card cert"><div class="icon"><i class="fas fa-utensils"></i></div><div class="issuer">Verified • MUB</div><h4>Food Safety Certificate</h4><p>Food hygiene, safety protocols and handling standards, reinforcing compliance-driven QA practice.</p><ul class="tags"><li>Hygiene standards</li><li>Safety protocols</li><li>Compliance</li></ul><a href="https://drive.google.com/file/d/1fFkecX_OhaLNUPAK_C79oMfEmCH4IiYN/view?usp=drive_link" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> View certificate</a></div>
+<div class="card cert"><div class="icon"><i class="fas fa-users"></i></div><div class="issuer">Professional Development</div><h4>Soft Skills Certificate</h4><p>Communication, teamwork and workplace professionalism for cross-team coordination.</p><ul class="tags"><li>Communication</li><li>Teamwork</li><li>Stakeholder management</li></ul><a href="https://drive.google.com/file/d/16xdYp61JFWQCyGVtA1ShNryaF4GeuXrz/view?usp=drive_link" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> View certificate</a></div>
+</div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-    <div class="section-tag">Portfolio</div>
-    <h2 class="section-title">Featured Projects</h2>
-    <p class="section-subtitle">Practical tools I've built to solve real operational and QA problems.</p>
-    <div class="projects-grid">
-        <a href="https://amify001-cpu.github.io/Car-Crm/" target="_blank" class="project-card">
-            <div class="project-icon">⚙️</div><span class="tag">Operations / CRM</span><h3>Car Garage POS</h3>
-            <p>End-to-end order management and inventory tracking system built with reporting dashboards and role-based access controls for QA oversight.</p>
-            <span class="project-cta">OPEN LIVE SITE →</span>
-        </a>
-        <a href="https://amify001-cpu.github.io/Commentgenerator/" target="_blank" class="project-card">
-            <div class="project-icon">💬</div><span class="tag">AI / Education</span><h3>AI Comment Generator v6</h3>
-            <p>AI feedback engine for vocational educators — supporting 8+ qualifications with tone-controlled responses to standardize assessment quality.</p>
-            <span class="project-cta">OPEN LIVE SITE →</span>
-        </a>
-    </div>
+<section id="projects" class="block">
+<h2 class="title">Projects</h2>
+<p class="sub">Two live tools I built, plus four showcase projects that apply my skills to everyday operations and compliance work.</p>
+<h3 class="group-label" style="margin-top:0">Live projects</h3>
+<div class="grid g-proj">
+<div class="card"><div class="kind">Operations / CRM</div><h3>Car Garage POS</h3><p>Order management and inventory tracking with reporting dashboards and role-based access for QA oversight.</p><a class="proj-link" href="https://amify001-cpu.github.io/Car-Crm/" target="_blank" rel="noopener">Open live site</a></div>
+<div class="card"><div class="kind">AI / Education</div><h3>AI Comment Generator v6</h3><p>An AI feedback tool for vocational educators, supporting 8+ qualifications with tone-controlled responses that standardize assessment quality.</p><a class="proj-link" href="https://amify001-cpu.github.io/Commentgenerator/" target="_blank" rel="noopener">Open live site</a></div>
+</div>
+<h3 class="group-label">Showcase projects <span class="status">(concept examples)</span></h3>
+<div class="grid g-proj">
+<div class="card"><div class="kind">Compliance &amp; Reporting</div><h3>Compliance &amp; Reporting Dashboard</h3><p>A tracker for audit findings, corrective actions and due dates, with a monthly summary view for managers.</p><ul class="tags"><li>Excel / Power BI</li><li>KPI reporting</li><li>Audit tracking</li></ul></div>
+<div class="card"><div class="kind">Operations</div><h3>Operations Performance Tracker</h3><p>A weekly view of task turnaround, SLA targets and recurring issues, built to show where processes slow down.</p><ul class="tags"><li>Excel</li><li>SLA tracking</li><li>Trend analysis</li></ul></div>
+<div class="card"><div class="kind">AI Productivity</div><h3>AI Administrative Assistant Toolkit</h3><p>A set of tested ChatGPT prompts and templates for meeting notes, email drafts, report summaries and SOP first drafts.</p><ul class="tags"><li>Prompt engineering</li><li>Templates</li><li>Documentation</li></ul></div>
+<div class="card"><div class="kind">Process Improvement</div><h3>Business Process Improvement Framework</h3><p>A step-by-step method for mapping a workflow, finding bottlenecks, testing a fix and recording the result in an SOP.</p><ul class="tags"><li>Process mapping</li><li>Root-cause analysis</li><li>SOPs</li></ul></div>
+</div>
 </section>
 
-<!-- CERTIFICATES -->
-<section id="certificates">
-    <div class="section-tag">Verified Credentials</div>
-    <h2 class="section-title">Certifications</h2>
-    <p class="section-subtitle">Formal training supporting my operations, quality, and reporting foundation.</p>
-
-    <div class="certificates-grid">
-
-        <div class="cert-card">
-            <div class="cert-head">
-                <div class="cert-icon"><i class="fas fa-table"></i></div>
-                <div class="cert-issuer">Certified • Umer</div>
-            </div>
-            <h4>Advanced Level Excel</h4>
-            <p class="cert-desc">Advanced spreadsheet training for tracking, reporting, and cleaning operational data.</p>
-            <ul class="cert-skills"><li>Formulas</li><li>Data analysis</li><li>Reporting</li></ul>
-            <a href="https://drive.google.com/file/d/10nL-JbDcMAQHrEVo1yOKNBBh59YB5xrT/view?usp=drive_link" class="cert-link" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> View Certificate</a>
-        </div>
-
-        <div class="cert-card">
-            <div class="cert-head">
-                <div class="cert-icon"><i class="fas fa-chart-column"></i></div>
-                <div class="cert-issuer">Professional Development</div>
-            </div>
-            <h4>Power BI: Basics of DAX</h4>
-            <p class="cert-desc">Certified course in DAX fundamentals, strengthening my business intelligence and data analysis capabilities.</p>
-            <ul class="cert-skills"><li>DAX</li><li>Power BI</li><li>Business intelligence</li></ul>
-            <a href="https://drive.google.com/file/d/1T_5R3JSUsQ_Vze31rbd9cRoS687TPkaM/view?usp=sharing" class="cert-link" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> View Certificate</a>
-        </div>
-
-        <div class="cert-card">
-            <div class="cert-head">
-                <div class="cert-icon"><i class="fas fa-utensils"></i></div>
-                <div class="cert-issuer">Verified • MUB</div>
-            </div>
-            <h4>Food Safety Certificate</h4>
-            <p class="cert-desc">Training in food hygiene, safety protocols, and handling standards — reinforcing compliance-driven QA practices.</p>
-            <ul class="cert-skills"><li>Hygiene standards</li><li>Safety protocols</li><li>Compliance</li></ul>
-            <a href="https://drive.google.com/file/d/1fFkecX_OhaLNUPAK_C79oMfEmCH4IiYN/view?usp=drive_link" class="cert-link" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> View Certificate</a>
-        </div>
-
-        <div class="cert-card">
-            <div class="cert-head">
-                <div class="cert-icon"><i class="fas fa-users"></i></div>
-                <div class="cert-issuer">Professional Development</div>
-            </div>
-            <h4>Soft Skills Certificate</h4>
-            <p class="cert-desc">Communication, teamwork, and workplace professionalism — essential for cross-team QA coordination.</p>
-            <ul class="cert-skills"><li>Communication</li><li>Teamwork</li><li>Stakeholder management</li></ul>
-            <a href="https://drive.google.com/file/d/16xdYp61JFWQCyGVtA1ShNryaF4GeuXrz/view?usp=drive_link" class="cert-link" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> View Certificate</a>
-        </div>
-
-    </div>
+<section id="experience" class="block">
+<h2 class="title">Professional experience</h2>
+<p class="sub">Roles across administration, operations, quality assurance and customer care.</p>
+<div class="timeline">
+<div class="job"><h3>Administrative &amp; QA Coordinator</h3><div class="when">Disruption Tech • 2024 – Present</div><p>Design quality control procedures, maintain audit documentation and manage administrative workflows to support compliance and consistency. Improve reporting by organizing recurring data into clearer summaries, and use AI-assisted tools to speed up drafting and documentation.</p></div>
+<div class="job"><h3>Operations Coordinator (Remote, Part-Time)</h3><div class="when">Emify Tech • Jan 2025 – May 2025</div><p>Oversaw logistics operations, standardized business continuity documentation and coordinated cross-functional teams to meet operational SLAs. Tracked performance against targets to support process optimization.</p></div>
+<div class="job"><h3>Customer Care Representative</h3><div class="when">Mindbridge • Sep 2023 – Jan 2024</div><p>Supported menu design and app client assistance for a GCC-based delivery company, handling quality-sensitive customer interactions and resolving escalations.</p></div>
+</div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-    <div class="section-tag">Career Journey</div>
-    <h2 class="section-title">Professional Experience</h2>
-    <p class="section-subtitle">A track record of building quality into operations across three organizations.</p>
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content left">
-                <h3>Administrative & QA Coordinator</h3>
-                <div class="timeline-role">Disruption Tech • 2024 – Present</div>
-                <p class="desc">Designing quality control procedures, maintaining audit documentation, and managing administrative workflows to ensure compliance and operational consistency.</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content right">
-                <h3>Operations Coordinator <i>(Remote-Part Time)</i></h3>
-                <div class="timeline-role">Emify Tech • Jan 2025 – May 2025</div>
-                <p class="desc">Oversaw logistics operations, standardized business continuity documentation, and coordinated cross-functional teams to hit operational SLAs.</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content left">
-                <h3>Customer Care Representative</h3>
-                <div class="timeline-role">Mindbridge • Sep 2023 – Jan 2024</div>
-                <p class="desc">Supported menu design and app client assistance for a GCC-based delivery company — directly handling quality-sensitive customer interactions and escalation resolution.</p>
-            </div>
-        </div>
-    </div>
-</section>
+<footer id="contact" class="contact">
+<h2>Let's work together.</h2>
+<p>Open to Operations Coordinator, Administration Coordinator, Compliance, QA and Process Improvement roles, remote or on-site.</p>
+<div class="links">
+<a href="https://wa.me/923214006374" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+<a href="tel:+923214006374"><i class="fas fa-phone"></i> Call</a>
+<a href="mailto:umer09061@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+<a href="https://drive.google.com/file/d/1ic7EBh75uBzsQx_dnTV--TQsYnqPn2k9/view?usp=sharing" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Resume</a>
+<a href="https://github.com/amify001-cpu" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+</div>
+<div class="foot">Lahore, Pakistan • © 2026 Muhammad Umar Nadeem. All rights reserved.</div>
+</footer>
 
-<!-- CONTACT -->
-<section id="contact" class="contact-section">
-    <h2>Let's build quality into every process.</h2>
-    <p class="lead">Open to Operations Coordinator, QA Specialist, and Process Improvement roles — remote or on-site.</p>
-    <div class="cta-container">
-        <a href="https://wa.me/923214006374" class="cta-icon-btn wa-btn" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
-        <a href="tel:+923214006374" class="cta-icon-btn ph-btn"><i class="fas fa-phone"></i><span>Call</span></a>
-        <a href="mailto:umer09061@gmail.com" class="cta-icon-btn em-btn"><i class="fas fa-envelope"></i><span>Email</span></a>
-        <a href="https://drive.google.com/file/d/1ic7EBh75uBzsQx_dnTV--TQsYnqPn2k9/view?usp=sharing" class="cta-icon-btn cv-btn" target="_blank" rel="noopener"><div class="custom-cv-icon">CV</div><span>Resume</span></a>
-        <a href="https://github.com/amify001-cpu" class="cta-icon-btn" target="_blank" rel="noopener"><i class="fab fa-github"></i><span>GitHub</span></a>
-    </div>
-    <div class="footer-note">LAHORE, PAKISTAN • © 2025 Muhammad Umar Butt. All rights reserved.</div>
-</section>
-
-<script>
-const cursor = document.getElementById('crystalCursor');
-document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-});
-document.querySelectorAll('a, .project-card, .timeline-content, .cert-card, .competency-card').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('glow'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('glow'));
-});
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, { threshold: 0.1 });
-document.querySelectorAll('.project-card, .timeline-content, .cert-card, .competency-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(40px)';
-    el.style.transition = 'all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1)';
-    observer.observe(el);
-});
-</script>
 </body>
 </html>
